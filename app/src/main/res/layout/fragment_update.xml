@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UpdateFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/updateImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="@id/imageLayout"
+                    app:layout_constraintStart_toStartOf="@id/imageLayout"
+                    app:layout_constraintTop_toTopOf="@id/imageLayout" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <EditText
+                android:id="@+id/isimUpdateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:hint="Yemek ismi:"
+                android:textSize="20dp"
+                android:fontFamily="@font/allerta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageLayout" />
+
+            <EditText
+                android:id="@+id/tarifUpdateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Yemek Tarifi:"
+                android:textSize="20dp"
+                android:fontFamily="@font/allerta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/isimUpdateEditText" />
+
+            <TextView
+                android:id="@+id/turUpdateSecTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                android:text="Yemek türü seçiniz"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/allerta"
+                app:layout_constraintBottom_toTopOf="@+id/turUpdateRadioGrup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarifUpdateEditText"
+                app:layout_constraintVertical_bias="0.74" />
+
+            <RadioGroup
+                android:id="@+id/turUpdateRadioGrup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarifUpdateEditText">
+
+                <RadioButton
+                    android:id="@+id/anaYemekUpdateRadioButton"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/null_radio_button"
+                    android:background="@drawable/radio_selector"
+                    android:gravity="center"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:layout_margin="10dp"
+                    android:text="Ana Yemek"/>
+
+                <RadioButton
+                    android:id="@+id/corbaUpdateRadioButton"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/null_radio_button"
+                    android:background="@drawable/radio_selector"
+                    android:gravity="center"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:layout_margin="10dp"
+                    android:text="Çorbalar"/>
+                <RadioButton
+                    android:id="@+id/tatliUpdateRadioButton"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/null_radio_button"
+                    android:background="@drawable/radio_selector"
+                    android:gravity="center"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:layout_margin="10dp"
+                    android:text="Tatlılar"/>
+                <RadioButton
+                    android:id="@+id/iceceklerUpdateRadioButton"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/null_radio_button"
+                    android:background="@drawable/radio_selector"
+                    android:gravity="center"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:layout_margin="10dp"
+                    android:text="İçecekler"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Update"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/turUpdateRadioGrup" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
